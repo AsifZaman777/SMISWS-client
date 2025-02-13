@@ -53,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function dispCtnt(d) {
     var ctnt = document.getElementById("ctnt");
-    if (ctnt !== null) ctnt.innerHTML += d + "<br>";
-  }
+    if (ctnt !== null) {
+        var timestamp = new Date().toLocaleString();
+        ctnt.innerHTML += `<span style="font-weight: bold; color: blue;">${timestamp}</span>: ${d}<br>`;
+    }
+}
+
 });
