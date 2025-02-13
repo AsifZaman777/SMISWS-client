@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMISWS client test</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>SMISWS client test</h1>
+      <div class="ui-cntnr">
+        <table>
+          <tr>
+            <td>Create Session with SMISWS Server:</td>
+            <td>
+              <input id="sendSess" type="button" value="Request Session" />
+            </td>
+          </tr>
+          <tr>
+            <td>Send Hearbeat:</td>
+            <td>
+              <input
+                id="sendAck"
+                type="button"
+                value="Request Acknowledgment"
+              />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="ctnt-container">
+        <section id="ctnt" class="ui-ctnt"></section>
+      </div>
+    </div>
+  </body>
+</html>
