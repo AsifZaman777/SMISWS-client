@@ -6,6 +6,12 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
+// Ensure the "logs" directory exists
+const logsDir = path.join(__dirname, 'logs');
+if (!fs.existsSync(logsDir)) {
+    fs.mkdirSync(logsDir, { recursive: true });
+}
+
 app.use(cors());
 app.use(express.json());
 
@@ -16,13 +22,15 @@ app.post('/save', (req, res) => {
         return res.status(400).send('Missing data or type');
     }
 
+    const timestamp = new Date();
+    const dateString = timestamp.toISOString().split('T')[0]; // YYYY-MM-DD
+    const logFilePath = path.join(logsDir, `logs_${dateString}.txt`);
+
     const logEntry = {
-        timestamp: new Date().toLocaleString(),
+        timestamp: timestamp.toLocaleString(),
         type: type,
         data: data
     };
-
-    const logFilePath = path.join(__dirname, 'logs.txt');
 
     fs.appendFile(logFilePath, JSON.stringify(logEntry) + '\n', (err) => {
         if (err) {
