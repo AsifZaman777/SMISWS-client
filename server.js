@@ -24,15 +24,15 @@ app.post('/save', (req, res) => {
 
     const logFilePath = path.join(__dirname, 'logs.txt');
 
-    // fs.appendFile(logFilePath, JSON.stringify(logEntry) + '\n', (err) => {
-    //     if (err) {
-    //         console.error('Error saving data:', err);
-    //         return res.status(500).send('Error saving data');
-    //     }
-    //     res.status(200).send('Data saved successfully');
-    // });
+    fs.appendFile(logFilePath, JSON.stringify(logEntry) + '\n', (err) => {
+        if (err) {
+            console.error('Error saving data:', err);
+            return res.status(500).send('Error saving data');
+        }
+        res.status(200).send('Data saved successfully');
+    });
 
-    console.log(logEntry);
+ 
 });
 
 app.listen(port, () => {
