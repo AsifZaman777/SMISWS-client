@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   var wss = new WebSocket("ws://192.168.100.48:8001");
 
@@ -5,32 +6,36 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("onmessage");
     console.log(e.data);
     dispCtnt(e.data);
+    logEvent('received', e.data);
   };
 
   wss.onopen = function (e) {
     console.log("onopen");
     console.log(e);
     dispCtnt("Connection established" + "<br>");
+    logEvent('status', 'Connection established');
   };
 
   wss.onclose = function (e) {
     console.log("onclose");
     console.log(e);
     dispCtnt("Connection closed" + "<br>");
+    logEvent('status', 'Connection closed');
   };
 
   wss.onerror = function (e) {
     console.log("onerror");
     console.log(e);
+    logEvent('error', e);
   };
 
   //#region send session
   document.getElementById("sendSess").addEventListener("click", function () {
     console.log("mt:LG");
     clrCtnt();
-    wss.send(
-      '{"data":{"16":"mt010","37":4325,"271":"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba","64":196608,"65":3},"mt":"LG"}'
-    );
+    const message = '{"data":{"16":"mt010","37":4325,"271":"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba","64":196608,"65":3},"mt":"LG"}';
+    wss.send(message);
+    logEvent('sent', message);
     setInterval(sendAck, 5000);
     clrReqTxt();
   });
@@ -38,7 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //#region functions
   function sendAck() {
     console.log("mt:AC");
-    wss.send('{"mt":"AC","data":{}}');
+    const ackMessage = '{"mt":"AC","data":{}}';
+    wss.send(ackMessage);
+    logEvent('sent', ackMessage);
   }
 
   function clrCtnt() {
@@ -57,6 +64,25 @@ document.addEventListener("DOMContentLoaded", function () {
         var timestamp = new Date().toLocaleString();
         ctnt.innerHTML += `<span style="font-weight: bold; color: blue;">${timestamp}</span>: ${d}<br>`;
     }
+  }
+
+  function logEvent(eventType, data) {
+    fetch('http://localhost:3000/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ data: data, type: eventType })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to save log');
+        }
+        return response.text();
+    })
+    .then(data => console.log("Log saved:", data)) // Debugging message
+    .catch(error => console.error("Error logging event:", error));
 }
+
 
 });
