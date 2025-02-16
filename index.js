@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   wss.onmessage = function (e) {
     console.log("onmessage");
-    console.log(e.data);
     dispCtnt(e.data);
   };
 
@@ -22,6 +21,33 @@ document.addEventListener("DOMContentLoaded", function () {
   wss.onerror = function (e) {
     console.log("onerror");
     console.log(e);
+  };
+
+  async function saveLog(content, type) {
+    try {
+      const response = await fetch('http://localhost:3000/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ data: content, type: type }),
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+    } catch (error) {
+      console.error('Error saving log:', error);
+    }
+  }
+
+  function logAndSave(message, type) {
+    originalConsoleLog(message);
+    saveLog(message, type);
+  }
+
+  var originalConsoleLog = console.log;
+  console.log = function (message) {
+    logAndSave(message, 'log');
   };
 
   //#region send session
@@ -61,7 +87,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var ctnt = document.getElementById("ctnt");
     if (ctnt !== null) {
       var timestamp = new Date().toLocaleString();
-      ctnt.innerHTML += `<span style="font-weight: bold; color: blue;">${timestamp}</span>: ${d}<br>`;
+      var logEntry = `<span style="font-weight: bold; color: blue;">${timestamp}</span>: ${d}<br>`;
+      ctnt.innerHTML += logEntry;
+      logAndSave(logEntry, 'content');
     }
   }
 });
