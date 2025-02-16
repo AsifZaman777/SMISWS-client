@@ -17,7 +17,7 @@ app.post('/save', (req, res) => {
     }
 
     const logEntry = {
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toLocaleString(),
         type: type,
         data: data
     };
@@ -29,10 +29,7 @@ app.post('/save', (req, res) => {
             console.error('Error saving data:', err);
             return res.status(500).send('Error saving data');
         }
-        res.status(200).send('Data saved successfully');
     });
-
- 
 });
 
 app.listen(port, () => {

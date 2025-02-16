@@ -39,6 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
     clrReqTxt();
   });
 
+  //#region send ack
+  document.getElementById('sendAck').addEventListener("click", function () {
+    clrCtnt();
+    sendAck();
+    clrReqTxt();
+  });
+
+
   //#region functions
   function sendAck() {
     console.log("mt:AC");
@@ -67,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function logEvent(eventType, data = null) {
     const timestamp = new Date().toLocaleString();
-    console.log("timestamp:", timestamp); // Debugging message
     const requestBody = data ? { timestamp, type: eventType, data } : { timestamp, type: eventType };
     
     fetch('http://localhost:3000/save', {

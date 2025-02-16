@@ -1,40 +1,21 @@
-{"timestamp":"2025-02-16T09:43:07.512Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:07.522Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:07.523Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:07.524Z","type":"status","data":"Connection closed"}
-{"timestamp":"2025-02-16T09:43:11.696Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:16.701Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:21.713Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:22.151Z","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
-{"timestamp":"2025-02-16T09:43:24.137Z","type":"status","data":"Connection established"}
-{"timestamp":"2025-02-16T09:43:24.794Z","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
-{"timestamp":"2025-02-16T09:43:29.806Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:34.810Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:39.810Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:44.824Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:45.791Z","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
-{"timestamp":"2025-02-16T09:43:46.517Z","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
-{"timestamp":"2025-02-16T09:43:47.778Z","type":"status","data":"Connection established"}
-{"timestamp":"2025-02-16T09:43:48.543Z","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
-{"timestamp":"2025-02-16T09:43:53.558Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:43:58.574Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:03.576Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:08.590Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:13.587Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:18.612Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:23.629Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:28.637Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:33.638Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:38.644Z","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
-{"timestamp":"2025-02-16T09:44:39.629Z","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
-{"timestamp":"2025-02-16T09:44:40.186Z","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
-{"timestamp":"2025-02-16T09:44:41.030Z","type":"error","data":{"isTrusted":true}}
-{"timestamp":"2025-02-16T09:44:41.031Z","type":"status","data":"Connection closed"}
-{"timestamp":"2025-02-16T09:44:41.270Z","type":"status","data":"Connection established"}
-{"timestamp":"2025-02-16T09:44:51.578Z","type":"status","data":"Connection closed"}
-{"timestamp":"2025-02-16T09:45:09.789Z","type":"status","data":"Connection established"}
-{"timestamp":"2025-02-16T09:45:19.126Z","type":"status","data":"Connection closed"}
-{"timestamp":"2025-02-16T09:45:36.454Z","type":"status","data":"Connection established"}
-{"timestamp":"2025-02-16T09:45:46.797Z","type":"status","data":"Connection closed"}
-{"timestamp":"2025-02-16T09:46:03.843Z","type":"status","data":"Connection established"}
-{"timestamp":"2025-02-16T09:46:13.132Z","type":"status","data":"Connection closed"}
+{"timestamp":"2/16/2025, 4:02:18 PM","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
+{"timestamp":"2/16/2025, 4:02:18 PM","type":"status","data":"Connection established"}
+{"timestamp":"2/16/2025, 4:02:20 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:02:25 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:02:30 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:02:32 PM","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
+{"timestamp":"2/16/2025, 4:02:34 PM","type":"status","data":"Connection established"}
+{"timestamp":"2/16/2025, 4:02:45 PM","type":"status","data":"Connection closed"}
+{"timestamp":"2/16/2025, 4:25:39 PM","type":"status","data":"Connection closed"}
+{"timestamp":"2/16/2025, 4:25:46 PM","type":"status","data":"Connection established"}
+{"timestamp":"2/16/2025, 4:25:47 PM","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
+{"timestamp":"2/16/2025, 4:25:52 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:25:57 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:26:02 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:26:07 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:27:45 PM","type":"status","data":"Connection established"}
+{"timestamp":"2/16/2025, 4:27:45 PM","type":"sent","data":"{\"data\":{\"16\":\"mt010\",\"37\":4325,\"271\":\"505ae561111b6bfd3fad9f3badb0d8ca200eefaf1dfbb2310f58d6c710acbbba\",\"64\":196608,\"65\":3},\"mt\":\"LG\"}"}
+{"timestamp":"2/16/2025, 4:27:50 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:27:55 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:28:01 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
+{"timestamp":"2/16/2025, 4:28:06 PM","type":"sent","data":"{\"mt\":\"AC\",\"data\":{}}"}
