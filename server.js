@@ -29,6 +29,7 @@ app.post('/save', (req, res) => {
             console.error('Error saving data:', err);
             return res.status(500).send('Error saving data');
         }
+        res.status(200).send('Data saved successfully');
     });
 });
 
