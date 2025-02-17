@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("onmessage");
     console.log(e.data);
     dispCtnt(e.data);
-    logEvent('received', e.data); // Log the received message
+    logEvent('received', e.data);
   };
 
   wss.onopen = function (e) {
@@ -25,9 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
   wss.onerror = function (e) {
     console.log("onerror");
     console.log(e);
-    logEvent('error', e.message);
+    logEvent('error', e);
   };
 
+  //#region send session
   document.getElementById("sendSess").addEventListener("click", function () {
     console.log("mt:LG");
     clrCtnt();
@@ -38,13 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
     clrReqTxt();
   });
 
+  //#region send ack
   document.getElementById('sendAck').addEventListener("click", function () {
     clrCtnt();
     sendAck();
-    logEvent('sent', '{"mt":"AC","data":{}}');
     clrReqTxt();
+    logEvent('sent', '{"mt":"AC","data":{}}');
   });
 
+
+  //#region functions
   function sendAck() {
     console.log("mt:AC");
     const ackMessage = '{"mt":"AC","data":{}}';
@@ -70,12 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function logEvent(eventType, data) {
-    const requestBody = {
-      type: eventType,
-      data: data
-    };
-
+  function logEvent(eventType, data = null) {
+    const timestamp = new Date().toLocaleString();
+    const requestBody = data ? { timestamp, type: eventType, data } : { timestamp, type: eventType };
+    
     fetch('http://localhost:3000/save', {
       method: 'POST',
       headers: {
@@ -89,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       return response.text();
     })
-    .then(data => console.log("Log saved:", data)) 
+    .then(data => console.log("Log saved:", data)) // Debugging message
     .catch(error => console.error("Error logging event:", error));
   }
 });
